@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1 onclick="console.log(Math.random())">DOM Events 1</h1>
+    <h1 onmouseover="console.log(Math.random())">DOM Events 2</h1>
+    <h1 onclick="console.log(this)">DOM Events 3</h1>
+    <h1 onclick="console.log(this.innerText)">DOM Events 4</h1>
+    <h1 onclick="console.log(this)">
+      <span onclick="console.log(this)">DOM Events 5</span>
+    </h1>
+    <script src="./main.js"></script>
+  </body>
+</html>
