@@ -1,7 +1,24 @@
-#first-heading {
+/* 0 */
+* {
+  color: white;
+}
+
+html {
+  /* Inherited from html: 0 */
+  color: gray;
+}
+
+/* 10 */
+h1 {
   color: red;
 }
 
-.second-heading {
-  color: blue;
+/* > 1000 */
+/* h1 {
+  color: red !important;
+} */
+
+/* 10 */
+li {
+  color: black;
 }

@@ -1,0 +1,19 @@
+:root {
+  /* Global */
+  --global-color: red;
+}
+
+h1 {
+  /* Local */
+  --local-color: green;
+  color: var(--local-color);
+}
+
+h2 {
+  /* Cannot access h1's local */
+  color: var(--local-color);
+}
+
+h3 {
+  color: var(--global-color);
+}

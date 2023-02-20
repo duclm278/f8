@@ -4,14 +4,55 @@
     <meta charset="UTF-8" />
     <title>F8 - Shop</title>
     <link rel="stylesheet" href="main.css" />
+    <!-- Later overrides former.  -->
+    <!-- Equal specificity: Latest rule wins. -->
+    <style>
+      /* 111 */
+      h1#heading-id.heading-class {
+        color: cyan;
+      }
+
+      /* 110 */
+      #heading-id.heading-class {
+        color: purple;
+      }
+
+      /* 100 */
+      #heading-id {
+        color: violet;
+      }
+
+      /* 10 */
+      .heading-class {
+        color: yellow;
+      }
+
+      /* 1 */
+      h1 {
+        color: green;
+      }
+    </style>
+    <!-- Later overrides former.  -->
+    <!-- Uncomment below to override above -->
+    <!-- <link rel="stylesheet" href="main.css" /> -->
   </head>
 
   <body>
     <div>
-      <h1 id="first-heading">CSS Selectors?</h1>
-      <h1 class="second-heading">CSS Selectors?</h1>
-      <h1 class="second-heading">CSS Selectors?</h1>
-      <h2 class="second-heading">ID & Class</h2>
+      <!-- Inspect this in DevTools to see priority -->
+      <h1 id="heading-id" class="heading-class">
+        <!-- <h1 style="color: blue" id="heading-id" class="heading-class"> -->
+        Priority?
+      </h1>
+      <ol>
+        <li>Internal == External</li>
+        <li>Inline styles - 1000</li>
+        <li>IDs - 100</li>
+        <li>Classes, pseudo-classes, attribute selectors - 10</li>
+        <li>Elements and pseudo-elements - 1</li>
+        <li>Equal specificity</li>
+        <li>The universal selector (*) and inherited values</li>
+      </ol>
     </div>
   </body>
 </html>

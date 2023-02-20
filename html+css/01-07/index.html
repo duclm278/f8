@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>F8 - Shop</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      * {
+        margin: 0;
+      }
+
+      .box {
+        width: 100%;
+        height: 100px;
+        background: #777;
+      }
+
+      .box::before {
+        /* Require content */
+        content: "";
+        /* content: "before"; */
+        /* Sometimes require display */
+        display: block;
+        width: 25px;
+        height: 25px;
+        background: #fff;
+      }
+
+      .box::after {
+        /* Require content property */
+        content: "";
+        /* content: "after"; */
+        /* Sometimes require display */
+        display: block;
+        width: 25px;
+        height: 25px;
+        background: #fff;
+      }
+
+      h1::first-letter {
+        font-size: 50px;
+      }
+
+      h1::first-line {
+        color: red;
+      }
+
+      /* Select text to see */
+      h1::selection {
+        color: #fff;
+        background-color: violet;
+      }
+
+      /* Apply whole root */
+      ::selection {
+        color: #fff;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <div>hello, box</div>
+      <div>hello, box</div>
+    </div>
+
+    <h1>CSS Pseudo-elements<br />Second line</h1>
+    <ul>
+      <li>::before</li>
+      <li>::after</li>
+      <li>::first-letter</li>
+      <li>::first-line</li>
+      <li>::selection</li>
+    </ul>
+  </body>
+</html>

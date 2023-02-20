@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>F8 - Shop</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      * {
+        margin: 0;
+      }
+
+      .box {
+        width: 100%;
+        /* width: calc(75% + 25%); */
+        /* width: calc(75% + 50px); */
+        height: 100px;
+        /* height: calc(100px + 25px); */
+        /* height: calc(100px - 25px); */
+        /* height: calc(100px * 2); */
+        /* height: calc(100px / 2px); */
+        background: #777;
+        /* background: rgb(119, 119, 119); */
+      }
+
+      .box::after {
+        content: attr(data-title);
+      }
+
+      a::after {
+        content: " (" attr(href) ")";
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box" data-title="This is a box"></div>
+    <a href="https://fullstack.edu.vn">Learn programming</a>
+
+    <h1>CSS Functions</h1>
+    <ul>
+      <li>attr()</li>
+      <li>calc()</li>
+      <li>linear-gradient()</li>
+      <li>rgb()</li>
+      <li>rgba()</li>
+      <li>var()</li>
+    </ul>
+  </body>
+</html>
