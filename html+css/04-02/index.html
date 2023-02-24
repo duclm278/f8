@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>hello, title</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      html,
+      body {
+        margin: 0;
+      }
+
+      li:nth-of-type(2) {
+        color: violet;
+      }
+
+      /* An element with position: absolute; is positioned relative to the
+       * nearest positioned ancestor (instead of positioned relative to the
+       * viewport, like fixed). */
+      /* However; if an absolute positioned element has no positioned ancestors,
+       * it uses the document body, and moves along with page scrolling. */
+      /* Note: Absolute positioned elements are removed from the normal flow, and
+       * can overlap elements. */
+      .box-1 {
+        width: 100%;
+        height: 200px;
+        background-color: #333;
+        /* Mark ancestor as positioned */
+        position: relative;
+      }
+
+      /* Design pattern: Element A is inside element B. Move A relative to B. */
+      .box-3 {
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        /* Positioned relative to ancestor */
+        position: absolute;
+
+        /* Top right */
+        top: 0;
+        right: 0;
+
+        /* Bottom left */
+        /* bottom: 0;
+        left: 0; */
+
+        /* Prefer top */
+        /* top: 0;
+        bottom: 0; */
+
+        /* Prefer left */
+        /* left: 0;
+        right: 0; */
+      }
+
+      /* Remove sizes to consider all directions */
+      /* .box-3 {
+        width: unset;
+        height: unset;
+        background-color: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+      } */
+
+      .box-2 {
+        width: 96%;
+        height: 100px;
+        background-color: violet;
+        /* position: relative; */
+        /* position: absolute;
+        bottom: 0;
+        right: 0; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box-1">
+      <div>
+        <div class="box-2">
+          <div class="box-3">Hello</div>
+        </div>
+      </div>
+    </div>
+
+    <h1>Position</h1>
+    <ul>
+      <li>Relative</li>
+      <li>Absolute</li>
+      <li>Fixed</li>
+      <li>Sticky</li>
+    </ul>
+  </body>
+</html>

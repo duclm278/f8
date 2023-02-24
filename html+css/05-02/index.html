@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>hello, title</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Handle img error of other tags */
+      div {
+        width: 250px;
+        height: 250px;
+        background-image: url("https://unsplash.com/hi.png"),
+          url("/img/250.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Handle img error of img tag-->
+    <!-- Execute a JavaScript if an error occurs when loading an image -->
+    <img
+      onerror="this.src='/img/250.png'"
+      src="https://unsplash.com/hi.png"
+      alt="Fried Rice"
+    />
+
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  --height: 100px;
+  background-color: orange;
+  height: var(--height);
+
+  /* Method 1 */
+  /* CSS properties will be inherited. */
+  /* text-align: center;
+  line-height: var(--height); */
+
+  /* Method 2: Can be used with multiples items */
+  display: flex;
+
+  /* Method 3: Even more flexible */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+
+  /* Method 4: Cannot use above methods */
+  /* position: relative; */
+}
+
+h3 {
+  /* Method 1 */
+  /* If you only want to center h3, you should specify here instead. */
+  /* text-align: center;
+  line-height: var(--height); */
+
+  /* Method 2: Can be used with multiples items */
+  margin: auto;
+
+  /* Method 4: Cannot use above methods */
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  transform: translate(-50%, -50%); */
+
+  /* Be creative! */
+  /* position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%) translateX(50%); */
+
+  /* Bar of any height. Vertically centered. Will affect container's height. */
+  /* Set padding-top, padding-bottom to change height of bar (border) */
+  /* border-left: 4px solid #333;
+  padding-left: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px; */
+
+  /* Setup for not affecting container's height */
+  /* Method 1, 2, 3 can use either position absolute or relative. */
+  /* Method 4 already has position property. Don't use this!*/
+  position: relative;
+}
+
+/* Bar of any height. Vertically centered. Won't affect container's height. */
+h3::after {
+  content: "";
+  border-left: 4px solid #333;
+
+  /* Left of container */
+  position: absolute;
+  left: -10px;
+
+  /* Use method 4 to vertically center! */
+  top: 50%;
+  transform: translateY(-50%);
+
+  /* Apply height! */
+  height: 50px;
+}
