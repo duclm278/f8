@@ -1,0 +1,34 @@
+/* Reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Từ tổng quan đến chi tiết
+*/
+
+/* 
+1. Vị trí
+2. Kích thước (width, height)
+3. Màu sắc
+4. Kiểu dáng (kiểu chữ, hình tròn, vuông...)
+*/
+
+#main {
+}
+
+#header {
+}
+
+#slider {
+}
+
+#content {
+}
+
+#footer {
+}
