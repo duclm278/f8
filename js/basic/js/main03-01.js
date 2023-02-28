@@ -1,3 +1,5 @@
+// Arrow functions don't have their own bindings to this, arguments, or super,
+// and should not be used as methods.
 Array.prototype.reduce2 = function (callback, result) {
   let i = 0;
   if (arguments.length < 2) {

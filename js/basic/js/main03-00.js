@@ -1,4 +1,8 @@
 // Type 1: toString, join, pop, push, shift, unshift, splice, concat, slice
+// pop - remove last item
+// push - add last item
+// shift - remove first item
+// unshift - add first item
 
 // Type 2: forEach, every, some, find, filter, map, reduce
 
@@ -42,25 +46,27 @@ const courses = [
 // });
 
 // every
+// Stop as soon as it finds a false
 // var isFree = courses.every(function (course, index) {
 //   console.log(index);
 //   return course.coin === 0;
 // });
-// console.log(isFree);
+// console.log(isFree); // > false
 
 // some
+// Stop as soon as it finds a true
 // var isFree = courses.some(function (course, index) {
 //   console.log(index);
 //   return course.coin === 0;
 // });
-// console.log(isFree);
+// console.log(isFree); // > true
 
 // find
 // var course = courses.find(function (course, index) {
 //   console.log(index);
 //   return course.name === "Ruby";
 // });
-// console.log(course);
+// console.log(course); // > {id: 3, name: "Ruby", coin: 0}
 
 // filter
 // var rubyCourses = courses.filter(function (course, index) {
@@ -74,9 +80,9 @@ const courses = [
 //   console.log(index);
 //   return {
 //     id: course.id,
-//     name: `Khoa hoc: ${course.name}`,
+//     name: `Name: ${course.name}`,
 //     coin: course.coin,
-//     coinText: `Gia: ${course.coin}`,
+//     coinText: `Price: ${course.coin}`,
 //   };
 // });
 // console.log(newCourses);
