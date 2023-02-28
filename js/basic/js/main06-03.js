@@ -8,8 +8,8 @@ console.log(boxElement.cloneNode(true).outerHTML);
 boxElement.outerHTML = "<span>Test</span>";
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/outerHTML
-console.log(boxElement.outerHTML); // Original boxElement
+console.log(boxElement.outerHTML); // Old boxElement, not current
 
 // Explore properties of a DOM object
-var boxElement = document.querySelector(".box");
+var boxElement = document.querySelector(".box"); // New boxElement, current
 console.dir(boxElement);
