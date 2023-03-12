@@ -2,9 +2,10 @@
 var course1 = "JavaScript";
 var course2 = "PHP";
 var description = `Courses: ${course1}, ${course2}`;
-console.log(description);
-console.log(`hello, \${}`);
+console.log(description); // > "Courses: JavaScript, PHP"
+console.log(`hello, \${}`); // > "hello, ${}"
 
+// Multiline string
 var lines =
   "line0\nline1\nline2\nline3\nline4\nline5\nline6\nline7\nline8\nline9\n";
 console.log(lines);

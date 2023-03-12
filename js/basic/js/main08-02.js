@@ -23,9 +23,9 @@ const course = {
   },
   getObj2: () => this,
 };
-console.log(course.getName());
-console.log(course.getObj1());
-console.log(course.getObj2());
+console.log(course.getName()); // > "JavaScript"
+console.log(course.getObj1()); // > Object {name: "JavaScript", getName: ƒ, getObj1: ƒ, getObj2: ƒ}
+console.log(course.getObj2()); // > Window
 
 // Constructor
 const Course1 = function (name, price) {
@@ -36,5 +36,5 @@ const Course2 = (name, price) => {
   this.name = name;
   this.price = price;
 };
-const newCourse1 = new Course1("JavaScript", 0);
+const newCourse1 = new Course1("JavaScript", 0); // OK!
 // const newCourse2 = new Course2("JavaScript", 0); // Error!

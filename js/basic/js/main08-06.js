@@ -47,6 +47,7 @@ var { image, ...newObj } = course;
 console.log(newObj);
 
 // Destruct nested object, Binding
+// More: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 var course = {
   name: "JavaScript",
   price: 1000,
@@ -55,9 +56,10 @@ var course = {
     name: "ReactJS",
   },
 };
+// As parent and child both have name property, destruct them in binding pattern.
 var {
-  name: pName,
-  child: { name: cName },
+  name: pName, // name of parent is renamed to pName
+  child: { name: cName }, // name of child is renamed to cName
 } = course;
 console.log(pName, cName);
 

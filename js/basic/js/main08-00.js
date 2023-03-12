@@ -3,6 +3,8 @@
 // 2. const >< var, let: Assignment
 
 // Block: {}
+// var scope: Function
+// let, const scope: Block
 {
   var course = "JavaScript";
   // let course = "JavaScript";
@@ -17,9 +19,11 @@
   }
 }
 
+// var: OK! let, const: Error!
 console.log("Outer:", course);
 
 // Hosting
+// var: OK! let, const: Error!
 a = 1;
 var a;
 // let a;
@@ -27,6 +31,7 @@ var a;
 console.log(a);
 
 // Assignment 1
+// var, let: OK! const: Error!
 var b = 1;
 // let b = 1;
 // const b = 1;
