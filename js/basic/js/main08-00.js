@@ -3,8 +3,8 @@
 // 2. const >< var, let: Assignment
 
 // Block: {}
-// var scope: Function
-// let, const scope: Block
+// var: Function Scope
+// let, const: Block Scope
 {
   var course = "JavaScript";
   // let course = "JavaScript";
